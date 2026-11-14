@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --es-bg: #060913;
+    --es-surface: #0b1120;
+    --es-surface-elevated: #111827;
+    --es-border: rgba(56, 189, 248, 0.18);
+    --es-text: #f1f5f9;
+    --es-text-muted: #94a3b8;
+    --es-accent: #38bdf8;
+    --es-accent-secondary: #6ea5ff;
+    --es-font-size: 18px;
+  }
+
+  html {
+    font-size: var(--es-font-size);
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--es-bg);
+    color: var(--es-text);
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Plus Jakarta Sans', 'IBM Plex Sans', sans-serif;
+  }
+
+  .font-mono, .tabular-nums {
+    font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  *:focus-visible {
+    outline: 3px solid #38bdf8;
+    outline-offset: 2px;
+  }
+}
+
+/* High Contrast WCAG AAA Theme */
+html.es-high-contrast {
+  --es-bg: #000000;
+  --es-surface: #000000;
+  --es-surface-elevated: #0a0a0a;
+  --es-border: #ffffff;
+  --es-text: #ffffff;
+  --es-text-muted: #facc15;
+  --es-accent: #fde047;
+  --es-accent-secondary: #38bdf8;
+}
+
+html.es-high-contrast body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+html.es-high-contrast .es-panel {
+  background-color: #000000 !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+html.es-high-contrast *:focus-visible {
+  outline: 4px solid #fde047 !important;
+  outline-offset: 3px !important;
+}
+
+/* Low Vision Mode */
+html.es-low-vision .es-panel {
+  border-width: 2px;
+}
+
+html.es-low-vision button,
+html.es-low-vision select,
+html.es-low-vision input {
+  min-height: 48px;
+}
+
+/* Reduced Motion */
+html.es-reduced-motion *,
+html.es-reduced-motion *::before,
+html.es-reduced-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Leaflet Dark Telemetry Override */
+.leaflet-container {
+  background: #060913;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.leaflet-control-attribution {
+  background: rgba(6, 9, 19, 0.85) !important;
+  color: #94a3b8 !important;
+  font-size: 11px !important;
+}
+
+.leaflet-control-attribution a {
+  color: #38bdf8 !important;
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 9999;
+  padding: 12px 20px;
+  background: #38bdf8;
+  color: #060913;
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+.skip-link:focus {
+  top: 16px;
+}

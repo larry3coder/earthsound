@@ -1,0 +1,6 @@
+{
+  "name": "EarthSound",
+  "description": "Interactive Earth science sonification studio translating NASA Earth Observation imagery and GIBS layers into harmonious multi-track music with WCAG AAA accessibility.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

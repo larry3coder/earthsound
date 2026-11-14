@@ -1,0 +1,310 @@
+[
+  {
+    "id": "eic_content_database",
+    "index": 1,
+    "title": "Earth Information Center (EIC) Content Database",
+    "short_title": "EIC Master Catalog",
+    "svs_id": "eic-master",
+    "svs_url": "https://earth.gov",
+    "gibs_layer": "MODIS_Terra_CorrectedReflectance_TrueColor",
+    "mode": "caldwell73",
+    "synthesis_role": "Master Track Catalog & True-Color Reference",
+    "musical_scale": ["C3", "D3", "E3", "G3", "A3", "C4", "D4", "E4", "G4", "A4", "C5", "D5", "E5", "G5", "A5", "C6"],
+    "bpm": 96,
+    "physical_unit": "Surface Reflectance (%)",
+    "physical_range": [0, 100],
+    "legend_audio_en": "Earth Information Center master reference. True-color planetary reflectance mapped with the Caldwell 73 harmonic pentatonic scale from South Pole bass to North Pole treble.",
+    "colorbar_stops": [
+      { "stop": 0.0, "color": "#09152B", "label": "Deep Ocean (4%)", "value": 4, "note": "C3" },
+      { "stop": 0.25, "color": "#1E5631", "label": "Tropical Canopy (22%)", "value": 22, "note": "G3" },
+      { "stop": 0.5, "color": "#8C7A5B", "label": "Arid Plateau (48%)", "value": 48, "note": "C4" },
+      { "stop": 0.75, "color": "#CBD5E1", "label": "Cloud Deck (76%)", "value": 76, "note": "G4" },
+      { "stop": 1.0, "color": "#F8FAFC", "label": "Polar Ice Sheet (96%)", "value": 96, "note": "C5" }
+    ],
+    "layers": {
+      "red": { "label": "Land & Desert Albedo", "instrument": "FMSynth", "note_range": "low" },
+      "green": { "label": "Biosphere & Vegetation", "instrument": "AMSynth", "note_range": "mid" },
+      "blue": { "label": "Ocean & Atmospheric Scatter", "instrument": "Synth", "note_range": "high" }
+    }
+  },
+  {
+    "id": "caldwell_73",
+    "index": 2,
+    "title": "Data Sonification: Caldwell 73",
+    "short_title": "Caldwell 73 Reference",
+    "svs_id": "13786",
+    "svs_url": "https://svs.gsfc.nasa.gov/13786/",
+    "gibs_layer": "VIIRS_SNPP_CorrectedReflectance_TrueColor",
+    "mode": "caldwell73",
+    "synthesis_role": "Mathematical Core (Y-Pitch, L-Volume, RGB-Timbre)",
+    "musical_scale": ["C3", "Eb3", "F3", "G3", "Bb3", "C4", "Eb4", "F4", "G4", "Bb4", "C5", "Eb5", "F5", "G5", "Bb5", "C6"],
+    "bpm": 100,
+    "physical_unit": "Relative Luminance (0-255)",
+    "physical_range": [0, 255],
+    "legend_audio_en": "Caldwell 73 reference sonification. Vertical position controls pitch across sixteen bands. Luminance above 30 drives volume, while red, green, and blue channels blend choir, marimba, and chime voices.",
+    "colorbar_stops": [
+      { "stop": 0.0, "color": "#05070E", "label": "Background Void (L < 30)", "value": 15, "note": "C3" },
+      { "stop": 0.25, "color": "#7C2D12", "label": "Warm Infrared Core (L 85)", "value": 85, "note": "F3" },
+      { "stop": 0.5, "color": "#2563EB", "label": "Ionized Hydrogen Shell (L 145)", "value": 145, "note": "C4" },
+      { "stop": 0.75, "color": "#38BDF8", "label": "High-Energy Filament (L 205)", "value": 205, "note": "G4" },
+      { "stop": 1.0, "color": "#F8FAFC", "label": "Stellar Peak (L 250)", "value": 250, "note": "C5" }
+    ],
+    "layers": {
+      "red": { "label": "Warm Dust & Choir Pad", "instrument": "FMSynth", "note_range": "low" },
+      "green": { "label": "Mid-Spectrum Marimba", "instrument": "AMSynth", "note_range": "mid" },
+      "blue": { "label": "High-Energy Chimes", "instrument": "Synth", "note_range": "high" }
+    }
+  },
+  {
+    "id": "night_lights_delta",
+    "index": 3,
+    "title": "Change in Night Lights 2012-2023 (EIC)",
+    "short_title": "Night Lights 2012-2023",
+    "svs_id": "5313",
+    "svs_url": "https://svs.gsfc.nasa.gov/5313/",
+    "gibs_layer": "VIIRS_Black_Marble",
+    "mode": "tempo_arpeggiator",
+    "synthesis_role": "BPM Tempo & Arpeggiator Density Modulation",
+    "musical_scale": ["D3", "F3", "A3", "C4", "D4", "E4", "F4", "A4", "C5", "D5", "E5", "F5", "A5", "C6", "D6", "E6"],
+    "bpm": 122,
+    "physical_unit": "Radiance Delta (nW/cm2/sr)",
+    "physical_range": [-30, 60],
+    "legend_audio_en": "Change in Night Lights from 2012 to 2023. Violet growth zones accelerate tempo and arpeggiator density. Amber decrease zones soften and slow the rhythmic pulse.",
+    "colorbar_stops": [
+      { "stop": 0.0, "color": "#EA580C", "label": "Radiance Decrease (-25 nW)", "value": -25, "note": "D3" },
+      { "stop": 0.25, "color": "#78350F", "label": "Mild Dimming (-8 nW)", "value": -8, "note": "A3" },
+      { "stop": 0.5, "color": "#1E293B", "label": "Stable Baseline (0 nW)", "value": 0, "note": "D4" },
+      { "stop": 0.75, "color": "#9333EA", "label": "Urban Growth (+30 nW)", "value": 30, "note": "A4" },
+      { "stop": 1.0, "color": "#E879F9", "label": "Rapid Corridor Expansion (+58 nW)", "value": 58, "note": "D5" }
+    ],
+    "layers": {
+      "red": { "label": "Radiance Decline (Amber)", "instrument": "FMSynth", "note_range": "low" },
+      "green": { "label": "Baseline Infrastructure", "instrument": "AMSynth", "note_range": "mid" },
+      "blue": { "label": "Urban Expansion (Violet)", "instrument": "Synth", "note_range": "high" }
+    }
+  },
+  {
+    "id": "sea_surface_currents",
+    "index": 4,
+    "title": "Global Sea Surface Currents & Temperature",
+    "short_title": "Sea Surface Currents",
+    "svs_id": "3912",
+    "svs_url": "https://svs.gsfc.nasa.gov/3912/",
+    "gibs_layer": "GHRSST_L4_MUR_Sea_Surface_Temperature",
+    "mode": "pad_filter_sweep",
+    "synthesis_role": "Ambient Pad Synthesizer & Low-Pass Filter Sweep",
+    "musical_scale": ["F2", "G2", "A2", "C3", "D3", "F3", "G3", "A3", "C4", "D4", "F4", "G4", "A4", "C5", "D5", "F5"],
+    "bpm": 84,
+    "physical_unit": "Sea Surface Temp (C)",
+    "physical_range": [-2, 32],
+    "legend_audio_en": "Global Sea Surface Currents and Temperature. Continuous ocean motion sweeps the low-pass filter cutoff, while thermal gradients shift timbre warmth from icy blue to tropical amber.",
+    "colorbar_stops": [
+      { "stop": 0.0, "color": "#1E3A8A", "label": "Polar Current (-1 C)", "value": -1, "note": "F2" },
+      { "stop": 0.25, "color": "#0284C7", "label": "Temperate Gyre (+10 C)", "value": 10, "note": "C3" },
+      { "stop": 0.5, "color": "#10B981", "label": "Subtropical Boundary (+19 C)", "value": 19, "note": "F3" },
+      { "stop": 0.75, "color": "#F59E0B", "label": "Warm Equatorial Flow (+26 C)", "value": 26, "note": "C4" },
+      { "stop": 1.0, "color": "#EF4444", "label": "Thermal Peak (+31 C)", "value": 31, "note": "F4" }
+    ],
+    "layers": {
+      "red": { "label": "Warm Thermal Core", "instrument": "FMSynth", "note_range": "low" },
+      "green": { "label": "Temperate Shear Layer", "instrument": "AMSynth", "note_range": "mid" },
+      "blue": { "label": "Cold Upwelling Currents", "instrument": "Synth", "note_range": "high" }
+    }
+  },
+  {
+    "id": "geos_aerosols",
+    "index": 5,
+    "title": "GEOS Aerosols: Atmospheric Particles",
+    "short_title": "GEOS Aerosols",
+    "svs_id": "5572",
+    "svs_url": "https://svs.gsfc.nasa.gov/5572/",
+    "gibs_layer": "OMPS_Aerosol_Index",
+    "mode": "multitrack_rgb",
+    "synthesis_role": "4-Track RGB Mixer (Dust / Sulfates / Sea Salt)",
+    "musical_scale": ["C3", "D3", "Eb3", "G3", "Ab3", "C4", "D4", "Eb4", "G4", "Ab4", "C5", "D5", "Eb5", "G5", "Ab5", "C6"],
+    "bpm": 110,
+    "physical_unit": "Aerosol Optical Depth (AOD)",
+    "physical_range": [0, 2.0],
+    "legend_audio_en": "GEOS Aerosols visualization. Red channel plays warm cello synth for dust and smoke. Green channel plays woodwind flute for sulfates. Blue channel plays crystalline chimes for sea salt.",
+    "colorbar_stops": [
+      { "stop": 0.0, "color": "#0F172A", "label": "Clear Atmosphere (0.05 AOD)", "value": 0.05, "note": "C3" },
+      { "stop": 0.25, "color": "#0EA5E9", "label": "Marine Sea Salt (0.45 AOD)", "value": 0.45, "note": "Eb4" },
+      { "stop": 0.5, "color": "#22C55E", "label": "Sulfate Haze (0.90 AOD)", "value": 0.9, "note": "G4" },
+      { "stop": 0.75, "color": "#F97316", "label": "Saharan Mineral Dust (1.40 AOD)", "value": 1.4, "note": "C4" },
+      { "stop": 1.0, "color": "#EF4444", "label": "Dense Carbon Smoke (1.95 AOD)", "value": 1.95, "note": "C3" }
+    ],
+    "layers": {
+      "red": { "label": "Dust & Smoke (Carbon)", "instrument": "FMSynth", "note_range": "low" },
+      "green": { "label": "Sulfates (Atmospheric)", "instrument": "AMSynth", "note_range": "mid" },
+      "blue": { "label": "Sea Salt Spray", "instrument": "Synth", "note_range": "high" }
+    }
+  },
+  {
+    "id": "air_quality_model",
+    "index": 6,
+    "title": "Air Quality Model Runs (PM2.5 & O3)",
+    "short_title": "Air Quality PM2.5",
+    "svs_id": "5533",
+    "svs_url": "https://svs.gsfc.nasa.gov/5533/",
+    "gibs_layer": "AIRS_L2_Carbon_Monoxide_500hPa_Volume_Mixing_Ratio_Day",
+    "mode": "consonance_dissonance",
+    "synthesis_role": "Consonance-to-Dissonance Harmonic Modulator",
+    "musical_scale": ["G3", "A3", "B3", "D4", "E4", "G4", "A4", "B4", "D5", "E5", "G5", "A5", "B5", "D6", "E6", "G6"],
+    "bpm": 98,
+    "physical_unit": "PM2.5 Concentration (ug/m3)",
+    "physical_range": [0, 150],
+    "legend_audio_en": "Air Quality Model Runs. Clean air produces pure major harmonies. Elevated particulate matter introduces progressive oscillator detune and minor tension chords.",
+    "colorbar_stops": [
+      { "stop": 0.0, "color": "#0284C7", "label": "Pure Clean Air (6 ug/m3)", "value": 6, "note": "G3" },
+      { "stop": 0.25, "color": "#10B981", "label": "Good Air Quality (18 ug/m3)", "value": 18, "note": "B3" },
+      { "stop": 0.5, "color": "#EAB308", "label": "Moderate Particulates (45 ug/m3)", "value": 45, "note": "D4" },
+      { "stop": 0.75, "color": "#F97316", "label": "Elevated PM2.5 (92 ug/m3)", "value": 92, "note": "G4" },
+      { "stop": 1.0, "color": "#DC2626", "label": "Severe Particulate Plume (145 ug/m3)", "value": 145, "note": "B4" }
+    ],
+    "layers": {
+      "red": { "label": "Dense PM2.5 Tension", "instrument": "FMSynth", "note_range": "low" },
+      "green": { "label": "Ozone Transition Band", "instrument": "AMSynth", "note_range": "mid" },
+      "blue": { "label": "Clean Consonance Air", "instrument": "Synth", "note_range": "high" }
+    }
+  },
+  {
+    "id": "perpetual_ocean_2",
+    "index": 7,
+    "title": "Perpetual Ocean 2: Western Boundary Currents",
+    "short_title": "Perpetual Ocean 2",
+    "svs_id": "5425",
+    "svs_url": "https://svs.gsfc.nasa.gov/5425/",
+    "gibs_layer": "MODIS_Terra_Chlorophyll_A",
+    "mode": "scale_sequencer",
+    "synthesis_role": "Rapid Pentatonic Current Sequencer",
+    "musical_scale": ["E3", "G3", "A3", "B3", "D4", "E4", "G4", "A4", "B4", "D5", "E5", "G5", "A5", "B5", "D6", "E6"],
+    "bpm": 132,
+    "physical_unit": "Current Velocity (m/s)",
+    "physical_range": [0, 2.5],
+    "legend_audio_en": "Perpetual Ocean 2 Western Boundary Currents including the Gulf Stream and Agulhas eddies. High-contrast stream filaments trigger rapid flowing pentatonic arpeggios.",
+    "colorbar_stops": [
+      { "stop": 0.0, "color": "#0F172A", "label": "Calm Abyssal Basin (0.1 m/s)", "value": 0.1, "note": "E3" },
+      { "stop": 0.25, "color": "#1D4ED8", "label": "Mesoscale Eddy (0.6 m/s)", "value": 0.6, "note": "A3" },
+      { "stop": 0.5, "color": "#06B6D4", "label": "Boundary Jet (1.2 m/s)", "value": 1.2, "note": "E4" },
+      { "stop": 0.75, "color": "#67E8F9", "label": "High-Shear Stream (1.8 m/s)", "value": 1.8, "note": "A4" },
+      { "stop": 1.0, "color": "#F8FAFC", "label": "Peak Gulf Stream Core (2.4 m/s)", "value": 2.4, "note": "E5" }
+    ],
+    "layers": {
+      "red": { "label": "Thermal Eddy Gradient", "instrument": "FMSynth", "note_range": "low" },
+      "green": { "label": "Shear Velocity Filaments", "instrument": "AMSynth", "note_range": "mid" },
+      "blue": { "label": "Deep Current Flow", "instrument": "Synth", "note_range": "high" }
+    }
+  },
+  {
+    "id": "dyamond_co2",
+    "index": 8,
+    "title": "DYAMOND Global Carbon Dioxide",
+    "short_title": "DYAMOND Global CO2",
+    "svs_id": "5196",
+    "svs_url": "https://svs.gsfc.nasa.gov/5196/",
+    "gibs_layer": "AIRS_L3_Carbon_Dioxide_IR_Daily",
+    "mode": "lfo_bassline",
+    "synthesis_role": "Diurnal LFO Breathing Bassline",
+    "musical_scale": ["A2", "C3", "D3", "E3", "G3", "A3", "C4", "D4", "E4", "G4", "A4", "C5", "D5", "E5", "G5", "A5"],
+    "bpm": 88,
+    "physical_unit": "CO2 Column (ppm)",
+    "physical_range": [395, 435],
+    "legend_audio_en": "DYAMOND Global Carbon Dioxide. Diurnal cycles of daytime biospheric absorption and nighttime release modulate a deep low-frequency breathing bass pulse.",
+    "colorbar_stops": [
+      { "stop": 0.0, "color": "#1E3A8A", "label": "Forest Sink Uptake (398 ppm)", "value": 398, "note": "A2" },
+      { "stop": 0.25, "color": "#0EA5E9", "label": "Oceanic Equilibrium (406 ppm)", "value": 406, "note": "E3" },
+      { "stop": 0.5, "color": "#FACC15", "label": "Background Troposphere (415 ppm)", "value": 415, "note": "A3" },
+      { "stop": 0.75, "color": "#F97316", "label": "Surface Plume (424 ppm)", "value": 424, "note": "E4" },
+      { "stop": 1.0, "color": "#DC2626", "label": "Peak Concentration (433 ppm)", "value": 433, "note": "A4" }
+    ],
+    "layers": {
+      "red": { "label": "CO2 Emission Plumes", "instrument": "FMSynth", "note_range": "low" },
+      "green": { "label": "Diurnal Photosynthesis", "instrument": "AMSynth", "note_range": "mid" },
+      "blue": { "label": "Background Atmospheric Mix", "instrument": "Synth", "note_range": "high" }
+    }
+  },
+  {
+    "id": "iss_lightning",
+    "index": 9,
+    "title": "ISS Lightning Events (2017-2023)",
+    "short_title": "ISS Lightning Events",
+    "svs_id": "5011",
+    "svs_url": "https://svs.gsfc.nasa.gov/5011/",
+    "gibs_layer": "VIIRS_SNPP_DayNightBand_ENCC",
+    "mode": "percussive_flash",
+    "synthesis_role": "Punctuated Flash Percussion Triggers (L > 240)",
+    "musical_scale": ["C4", "E4", "G4", "B4", "D5", "E5", "G5", "B5", "C6", "D6", "E6", "G6", "A6", "B6", "C7", "D7"],
+    "bpm": 128,
+    "physical_unit": "Flash Rate (flashes/km2/yr)",
+    "physical_range": [0, 120],
+    "legend_audio_en": "Lightning detected from the International Space Station between 2017 and 2023. High-luminance electrical flashes above 240 trigger crisp percussive synth strikes mapped by latitude.",
+    "colorbar_stops": [
+      { "stop": 0.0, "color": "#05070E", "label": "Quiet Night Sector (0.2)", "value": 0.2, "note": "C4" },
+      { "stop": 0.25, "color": "#312E81", "label": "Isolated Storm Cell (15)", "value": 15, "note": "G4" },
+      { "stop": 0.5, "color": "#7C3AED", "label": "Tropical Convergence (45)", "value": 45, "note": "B4" },
+      { "stop": 0.75, "color": "#38BDF8", "label": "Active Supercell (85)", "value": 85, "note": "E5" },
+      { "stop": 1.0, "color": "#FFFFFF", "label": "Peak Discharge L > 240 (118)", "value": 118, "note": "G5" }
+    ],
+    "layers": {
+      "red": { "label": "Storm Anvil Glow", "instrument": "FMSynth", "note_range": "low" },
+      "green": { "label": "Convective Core", "instrument": "AMSynth", "note_range": "mid" },
+      "blue": { "label": "Optical Lightning Spike", "instrument": "Synth", "note_range": "high" }
+    }
+  },
+  {
+    "id": "atmospheric_river_3d",
+    "index": 10,
+    "title": "3D View of an Atmospheric River",
+    "short_title": "Atmospheric River 3D",
+    "svs_id": "4960",
+    "svs_url": "https://svs.gsfc.nasa.gov/4960/",
+    "gibs_layer": "MODIS_Terra_Water_Vapor_5km_Day",
+    "mode": "stereo_reverb",
+    "synthesis_role": "3D Stereo Panner & Atmospheric Reverb Depth",
+    "musical_scale": ["D3", "F3", "G3", "A3", "C4", "D4", "F4", "G4", "A4", "C5", "D5", "F5", "G5", "A5", "C6", "D6"],
+    "bpm": 92,
+    "physical_unit": "Integrated Water Vapor (mm)",
+    "physical_range": [0, 70],
+    "legend_audio_en": "Three-dimensional Atmospheric River moisture transport. Plume width and vapor density govern stereo panning across left and right channels and cavernous reverb depth.",
+    "colorbar_stops": [
+      { "stop": 0.0, "color": "#1E293B", "label": "Dry Subsidence (5 mm)", "value": 5, "note": "D3" },
+      { "stop": 0.25, "color": "#0369A1", "label": "Maritime Moisture (20 mm)", "value": 20, "note": "G3" },
+      { "stop": 0.5, "color": "#06B6D4", "label": "Vapor Corridor (38 mm)", "value": 38, "note": "D4" },
+      { "stop": 0.75, "color": "#34D399", "label": "Dense River Core (54 mm)", "value": 54, "note": "A4" },
+      { "stop": 1.0, "color": "#FEF08A", "label": "Extreme Precipitation Plume (68 mm)", "value": 68, "note": "D5" }
+    ],
+    "layers": {
+      "red": { "label": "Latent Heat Release", "instrument": "FMSynth", "note_range": "low" },
+      "green": { "label": "Mid-Troposphere Moisture", "instrument": "AMSynth", "note_range": "mid" },
+      "blue": { "label": "Integrated Vapor Stream", "instrument": "Synth", "note_range": "high" }
+    }
+  },
+  {
+    "id": "gedi_forest_height",
+    "index": 11,
+    "title": "GEDI Global Forest Canopy Height",
+    "short_title": "GEDI Forest Height",
+    "svs_id": "4950",
+    "svs_url": "https://svs.gsfc.nasa.gov/4950/",
+    "gibs_layer": "MODIS_Terra_NDVI_8Day",
+    "mode": "elevation_pitch",
+    "synthesis_role": "Canopy Elevation-to-Pitch Marimba Mapping (0-40m)",
+    "musical_scale": ["G2", "A2", "B2", "D3", "E3", "G3", "A3", "B3", "D4", "E4", "G4", "A4", "B4", "D5", "E5", "G5"],
+    "bpm": 106,
+    "physical_unit": "Canopy Height (m)",
+    "physical_range": [0, 40],
+    "legend_audio_en": "GEDI Forest Canopy Height from 0 to 40 meters. Brown low scrublands sound in deep bass marimba octaves, rising through emerald canopy to bright upper-octave chords in forty-meter rainforests.",
+    "colorbar_stops": [
+      { "stop": 0.0, "color": "#78350F", "label": "Low Shrubland (2 m)", "value": 2, "note": "G2" },
+      { "stop": 0.25, "color": "#3F6212", "label": "Savanna Woodland (10 m)", "value": 10, "note": "D3" },
+      { "stop": 0.5, "color": "#15803D", "label": "Temperate Forest (20 m)", "value": 20, "note": "G3" },
+      { "stop": 0.75, "color": "#22C55E", "label": "Dense Tropical Canopy (31 m)", "value": 31, "note": "G4" },
+      { "stop": 1.0, "color": "#ECFDF5", "label": "Emergent Old-Growth (40 m)", "value": 40, "note": "G5" }
+    ],
+    "layers": {
+      "red": { "label": "Understory & Soil (0-8m)", "instrument": "FMSynth", "note_range": "low" },
+      "green": { "label": "Canopy Biomass (10-35m)", "instrument": "AMSynth", "note_range": "mid" },
+      "blue": { "label": "Emergent Crown Peaks (40m)", "instrument": "Synth", "note_range": "high" }
+    }
+  }
+]
